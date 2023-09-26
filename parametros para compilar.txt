@@ -1,0 +1,6 @@
+gcc -Wall -nostdlib -nostdinc -fno-exceptions -fno-builtin -I./include/ -c arquivo.c -o arquivo.o
+
+
+ld -T link.ld -o kernel.bin ks.o kernel.o
+
+nasm -f aout kernel_start.asm -o ks.o
